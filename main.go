@@ -51,7 +51,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			case *linebot.TextMessage:
 				
 				
-				answers :=[]string{"咿喔","咿~喔~","咿喔咿喔喔","咿喔~咿喔","咿咿喔喔~","咿~喔咿~喔","咿喔喔~~","喔~咿喔~~","咿喔咿喔咿喔"}
+		answers :=[]string{"咿喔","咿~喔~","咿喔咿喔喔","咿喔~咿喔","咿咿喔喔~","咿~喔咿~喔","咿喔喔~~","喔~咿喔~~","咿喔咿喔咿喔"}
 				
 				var txt = message.Text+","+answers[rand.Intn(len(answers))]
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(txt)).Do(); err != nil {
